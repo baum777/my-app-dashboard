@@ -3,9 +3,10 @@ import { NavLink as RouterNavLink, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
   LayoutDashboard,
-  Coins,
-  Image,
-  History,
+  BookOpen,
+  GraduationCap,
+  LineChart,
+  Bell,
   Settings,
   Menu,
   X,
@@ -21,10 +22,11 @@ interface SidebarProps {
 
 const navItems = [
   { path: "/", label: "Dashboard", icon: LayoutDashboard },
-  { path: "/tokens", label: "Token", icon: Coins },
-  { path: "/nfts", label: "NFTs", icon: Image },
-  { path: "/history", label: "Historie", icon: History },
-  { path: "/settings", label: "Einstellungen", icon: Settings },
+  { path: "/journal", label: "Journal", icon: BookOpen },
+  { path: "/learn", label: "Learn", icon: GraduationCap },
+  { path: "/chart", label: "Chart", icon: LineChart },
+  { path: "/alerts", label: "Alerts", icon: Bell },
+  { path: "/settings", label: "Settings", icon: Settings },
 ];
 
 export const DashboardLayout = ({ children }: SidebarProps) => {
