@@ -1,0 +1,27 @@
+ROLE: You are Lovable in repo Sparkfined_PWA. Follow global project rules: validate first, minimize scope, keep outputs concise.
+
+TASK: Verify existing infrastructure needed for “Journal Manual Entry (Overlay) + Custom Templates”.
+DO NOT CHANGE CODE. Only inspect and report.
+
+CHECKLIST:
+1) Find Journal route/page implementation for `/journal` and the Journal V2 host component path.
+2) Locate Dexie setup:
+   - db file(s), schema definition, table list
+   - confirm entries table name + primary key
+   - identify existing entry type/interface/schema used by auto-capture
+3) Locate telemetry/tracking wrapper:
+   - function signature (track/event bus)
+   - where sessionId/buildVersion/platform/isOffline/walletConnected are derived today
+4) Locate UI primitives for Overlay/Modal/Drawer/Sheet and existing pattern used in app (desktop vs mobile).
+5) Locate existing tags UI (chips), file upload/dropzone utilities, and toast/snackbar (if any).
+6) Report back in this structure:
+   - Paths found (with filenames)
+   - Confirmed schemas/APIs (copy type signatures)
+   - Any mismatches vs the target spec
+   - Minimal mapping proposal for “manual_v2” entries into existing schema
+
+OUTPUT FORMAT (strict):
+- ✅ Found
+- ⚠️ Gap
+- 🔧 Mapping/Decision
+Keep it under ~200 lines.
